@@ -21,7 +21,9 @@ class Settings(BaseSettings):
     allowed_origins: List[str] = [
         "http://localhost:3000", 
         "http://127.0.0.1:3000",
-        "http://localhost:3001"
+        "http://localhost:3001",
+        "https://sc3040-backend.onrender.com",  # Add your frontend domain here
+        "*"  # Allow all origins for development (remove in production)
     ]
     
     # Environment
