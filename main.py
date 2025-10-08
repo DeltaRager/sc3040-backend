@@ -8,6 +8,7 @@ from config import settings
 from protected_routes import router as protected_router
 from leaderboard_routes import router as leaderboard_router
 from images_routes import router as images_router
+from asl_routes import router as asl_router
 import logging
 
 # Set up logging
@@ -35,6 +36,7 @@ try:
     app.include_router(protected_router)
     app.include_router(leaderboard_router)
     app.include_router(images_router)
+    app.include_router(asl_router)
     logger.info("Routes loaded successfully")
 except Exception as e:
     logger.error(f"Error loading routes: {e}")

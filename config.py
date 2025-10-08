@@ -29,6 +29,9 @@ class Settings(BaseSettings):
     # Environment
     environment: str = os.getenv("ENVIRONMENT", "development")
     
+    # OpenAI API Configuration
+    openai_api_key: str = os.getenv("OPENAI_API_KEY", "")
+    
     class Config:
         env_file = ".env"
         case_sensitive = False
